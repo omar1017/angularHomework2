@@ -1,0 +1,8 @@
+.input-group-append, input, .tabset .tab{
+  display: inline-block;
+
+}
+
+input{
+  width: 30%;
+}
