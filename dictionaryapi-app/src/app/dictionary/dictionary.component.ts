@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { TabsModule } from 'ngx-bootstrap/tabs';
+import { DictionaryService } from '../../services/dictionary.service';
 
 @Component({
   selector: 'app-dictionary',
@@ -9,6 +10,14 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
   templateUrl: './dictionary.component.html',
   styleUrl: './dictionary.component.css'
 })
-export class DictionaryComponent {
-  
+export class DictionaryComponent implements OnInit {
+
+  constructor(private dictionaryService: DictionaryService) {
+
+  }
+
+  ngOnInit(): void {
+    
+  }
+
 }
