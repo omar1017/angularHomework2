@@ -1,1 +1,8 @@
-<p>meaning works!</p>
+<ul *ngIf="meaningData">
+    @for (item of meaningData ; track $index) {
+        <li>
+            {{item.definition}}
+        </li>
+        
+    }
+</ul>

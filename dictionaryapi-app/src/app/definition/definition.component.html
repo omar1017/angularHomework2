@@ -1,1 +1,8 @@
-<p>definition works!</p>
+<ul *ngIf="definitions">
+    @for (item of definitions ; track $index) {
+        <li>
+            {{item.definition}}
+        </li>
+        
+    }
+</ul>

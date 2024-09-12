@@ -8,10 +8,20 @@
 <div>
   <tabset class="tabset">
     <tab class="tab" heading="Meaning ">
-     the word is:  {{data?.word}}
+    <app-meaning [meaningData]="meaning">
+
+    </app-meaning>
     </tab>
-    <tab class="tab" heading="Synonyms">Synonyms</tab>
-    <tab class="tab" heading="Definition">Definition</tab>
+    <tab class="tab" heading="Synonyms">
+      <app-synonyms [synonyms]="synonyms">
+
+      </app-synonyms>
+    </tab>
+    <tab class="tab" heading="Definition">
+      <app-definition [definitions]="definition">
+
+      </app-definition>
+    </tab>
     <tab class="tab" heading="Audio">Audio</tab>
   </tabset>
 </div>

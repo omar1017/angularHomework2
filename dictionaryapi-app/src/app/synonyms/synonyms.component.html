@@ -1,1 +1,7 @@
-<p>synonyms works!</p>
+<ul *ngIf="synonyms">
+    @for (item of synonyms ; track $index) {
+        <li>
+            {{item}}
+        </li>
+    }
+</ul>
