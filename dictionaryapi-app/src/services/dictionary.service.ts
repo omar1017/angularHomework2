@@ -12,8 +12,8 @@ export class DictionaryService {
   constructor(private http : HttpClient) {
   }
 
-  getWord(wordSearch : string) : Observable<Word> {
-    return this.http.get<Word>("https://api.dictionaryapi.dev/api/v2/entries/en/" + wordSearch);
+  getWord(wordSearch : string) : Observable<Word[]> {
+    return this.http.get<Word[]>("https://api.dictionaryapi.dev/api/v2/entries/en/" + wordSearch);
   }
 
 }
