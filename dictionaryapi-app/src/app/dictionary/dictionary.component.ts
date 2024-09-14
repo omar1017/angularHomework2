@@ -8,11 +8,12 @@ import { MeaningComponent } from "../meaning/meaning.component";
 import { Definition } from '../../Models/Definition';
 import { SynonymsComponent } from "../synonyms/synonyms.component";
 import { DefinitionComponent } from "../definition/definition.component";
+import { AudioComponent } from "../audio/audio.component";
 
 @Component({
   selector: 'app-dictionary',
   standalone: true,
-  imports: [RouterOutlet, TabsModule, FormsModule, MeaningComponent, SynonymsComponent, DefinitionComponent],
+  imports: [RouterOutlet, TabsModule, FormsModule, MeaningComponent, SynonymsComponent, DefinitionComponent, AudioComponent],
   templateUrl: './dictionary.component.html',
   styleUrl: './dictionary.component.css'
 })
@@ -40,6 +41,7 @@ export class DictionaryComponent implements OnInit {
         this.meaning = this.data.meanings[0].definitions;
         this.definition = this.data.meanings[0].definitions;
         this.synonyms = this.data.meanings[0].synonyms;
+        this.audio = this.data.phonetics.map(phonatic => phonatic.audio);
       }
     )
     
